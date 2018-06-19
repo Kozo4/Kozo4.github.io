@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kozo4">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Kozo4</title>
+  <link rel="apple-touch-icon" sizes="57x57" href="http://atmozfea.rs/assets/img/favicons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="http://atmozfea.rs/assets/img/favicons/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="http://atmozfea.rs/assets/img/favicons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="http://atmozfea.rs/assets/img/favicons/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="http://atmozfea.rs/assets/img/favicons/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="http://atmozfea.rs/assets/img/favicons/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="http://atmozfea.rs/assets/img/favicons/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="http://atmozfea.rs/assets/img/favicons/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="http://atmozfea.rs/assets/img/favicons/apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" href="http://atmozfea.rs/assets/img/favicons/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="http://atmozfea.rs/assets/img/favicons/android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="http://atmozfea.rs/assets/img/favicons/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="http://atmozfea.rs/assets/img/favicons/favicon-16x16.png" sizes="16x16">
+  <link href="https://cdn.bootcss.com/minireset.css/0.0.2/minireset.css" rel="stylesheet">
+  <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <style media="screen">
+      html,body{
+        width: 100%;
+        height: 100%;
+        text-align: center;
+      }
+      #one{
+        width: 100%;
+        height: 60%;
+      }
+      #two{
+        width: 100%;
+        height: 40%;
+        background: rgb(48, 55, 57);
+        box-shadow: 0 0 10px 5px rgba(0,0,0,.1);
+      }
+      .img{
+        padding: 15% 0;
+      }
+      .img img{
+        width: 20%;
+      }
+      ul{
+        padding: 8% 0 0;
+      }
+      li{
+        display: inline-block;
+        padding: 10px;
+        margin: 5px;
+      }
+      li > *{
+        padding: 5px;
+      }
+      i{
+        padding: 0 15px;
+      }
+      a{
+        font-size: 25px;
+        display: block;
+        color: rgba(255,255,255,.6);
+        text-decoration: none;
+        transition: all .3s;
+      }
+      a:hover{
+        color: rgba(255,255,255,1)
+      }
+  </style>
+</head>
+<body>
+  <div id="one">
+    <div class="img">
+      <img src="kozo4.svg" alt="">
+    </div>
+  </div>
+  <div id="two">
+    <ul>
+      <li><a href="http://chenhonzhou.link"><i class="fa fa-bicycle"></i>Blog</a></li>
+      <li><a href="https://weibo.com/chendadaover"><i class="fa fa-weibo"></i>Weibo</a></li>
+      <li><a href="http://github.com/kozo4"><i class="fa fa-github"></i>Github</a></li>
+      <!-- <li><a href=""></a></li> -->
+    </ul>
+  </div>
+</body>
+<script type="text/javascript">
+  console.log('Tue Jun 19 2018 15:40:05 GMT+0800 (中国标准时间)');
+  var a = document.querySelectorAll('#two a')
+  for (var i = 0; i < a.length; i++) {
+    if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+      console.log('你目前使用的UA判断为手机');
+      // window.location.href = "https://www.baidu.com/";
+    } else {
+      console.log('你目前使用的UA判断为PC端');
+      a[i].target = '_blank'
+        // window.location.href = "http://news.baidu.com/";
+    }
+  }
+</script>
+</html>
